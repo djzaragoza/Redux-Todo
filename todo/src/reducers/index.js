@@ -2,7 +2,7 @@ import { SUBMIT_TODO, TOGGLE_TODO } from '../actions/index';
 
 const initialState = {
     todos: [{
-        value: 'Walk the dog.',
+        value: 'MOW THE LAWN',
         completed: false
     }]
 };
