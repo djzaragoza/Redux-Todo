@@ -10,7 +10,7 @@ export function submitTodo(todo) {
 }
 
 export function toggleTodo(index) {
-    reutrn {
+    return {
         type: TOGGLE_TODO,
         payload: index
     };
