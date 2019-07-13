@@ -1,12 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleTodo } from "..actions/index";
+import { toggleTodo } from "../actions/index";
 import "./Todo.css";
 
 class Todo extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     toggleTodo = index => {
         console.log("toggle: ", index);
@@ -19,7 +17,7 @@ class Todo extends React.Component {
 
     render() {
         return (
-            <div 
+            <div
                 className={`task${this.props.todo.completed ? " completed" : ""}`}
                 onClick={this.toggleHandler}
             >
@@ -29,12 +27,6 @@ class Todo extends React.Component {
     }
 }
 
-//const mapStateToProps = state => {
-// console.log("Todo.js: mapStateToProps: state ", state);
-//  return {
-//      todosOnProps: state.todos
-//     }
-// }
 
 export default connect(
     null,

@@ -11,16 +11,16 @@ class TodoForm extends React.Component {
     }
 
     handleChanges = e => {
-        this.setState({ [e.target.name]: e.target.value});
+        this.setState({ [e.target.name]: e.target.value });
     };
 
     handleSubmitTodo = e => {
         e.preventDefault();
-        this.PaymentResponse.submitTodo(this.state.newTodo);
-        this.setState({ newTodo: ""});
+        this.props.submitTodo(this.state.newTodo);
+        this.setState({ newTodo: "" });
     }
 
-    render () {
+    render() {
         return (
             <form onSubmit={this.handleSubmitTodo}>
                 <input type="text" name="newTodo" value={this.state.newTodo} onChange={this.handleChanges} placeholder="Add Todo..." />
@@ -30,14 +30,7 @@ class TodoForm extends React.Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     console.log("TodoForm.js: mapStateToProps: state: ", state);
-//     return {
-//         todosOnProps: state.todos
-//     }
-// }
-
 export default connect(
     null,
-    { submitTodo} 
+    { submitTodo }
 )(TodoForm);
